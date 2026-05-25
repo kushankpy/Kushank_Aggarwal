@@ -94,7 +94,7 @@ export const projects: Project[] = [
         value: "Built a solar vehicle in three weeks. Any sane person would flinch, but this isn't just my story. The entire team at DTU Supermileage didn't blink either. Maybe we were all a little delusional. But the late nights, the impossible decisions, the \"we'll figure it out\" moments, that's what made the way.",
       },
     ],
-    githubLink: "mailto:kushank2005@gmail.com?subject=Request%20GitHub%20Repo%20-%20Project%20Arka",
+    githubLink: "https://github.com/Kushaggar/Arka",
   },
   {
     sequence: "PROJECT 02 / IIT DELHI",
@@ -119,7 +119,7 @@ export const projects: Project[] = [
         value: "Ongoing work with a target of sub-micron calibration reliability through model refinement and testing loops.",
       },
     ],
-    githubLink: "mailto:kushank2005@gmail.com?subject=Request%20GitHub%20Repo%20-%20Displacement%20Sensor",
+    githubLink: "https://github.com/Kushaggar/Precision-Displacement-Sensor",
     status: "IN PROGRESS",
   },
 ];
@@ -210,7 +210,7 @@ export const experienceTimeline: ExperienceEntry[] = [
     organization: "Mecrox Tech Pvt. Ltd.",
     role: "Mechanical Trainee",
     duration: "Dec 2024 - Jan 2025",
-    logo: "/assets/Mecrox Tech Pvt Ltd.jfif",
+    logo: "/assets/Mecrox Tech Pvt Ltd.png",
     credentials: "/assets/Internship Letter Mecrox.JPG",
     details: [
       {
@@ -230,7 +230,7 @@ export const experienceTimeline: ExperienceEntry[] = [
     organization: "Innovante Engineering Solutions",
     role: "Mechanical Design Intern",
     duration: "May 2024 - Jul 2024",
-    logo: "/assets/Innovante Engineering Solutions.jfif",
+    logo: "/assets/Innovante Engineering Solutions.png",
     credentials: "/assets/Internship Letter Innovante.pdf",
     details: [
       {
@@ -255,7 +255,7 @@ export const experienceTimeline: ExperienceEntry[] = [
     organization: "Team DTU Supermileage",
     role: "Head of Aerodynamics and Chassis",
     duration: "Sep 2023 - Present",
-    logo: "/assets/Team DTU Supermileage.jfif",
+    logo: "/assets/Team DTU Supermileage.png",
     details: [
       {
         title: "Ownership & Leadership",
