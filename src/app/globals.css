@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07090d;
+  --bg-soft: #0d1118;
+  --panel: #111722;
+  --panel-strong: #151d2a;
+  --text: #e8ebef;
+  --text-soft: #bbc2cf;
+  --text-muted: #8e96a4;
+  --accent: #ba9a66;
+  --accent-strong: #d1af78;
+  --line: rgba(186, 154, 102, 0.2);
+  --line-strong: rgba(186, 154, 102, 0.4);
+  --nav-bg: #120d08;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(186, 154, 102, 0.11), transparent 34%),
+    radial-gradient(circle at 82% 7%, rgba(83, 127, 173, 0.12), transparent 26%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.heading-serif {
+  font-family: var(--font-heading), "Times New Roman", serif;
+  letter-spacing: 0.02em;
+}
+
+.ui-sans {
+  font-family: var(--font-ui), "Segoe UI", sans-serif;
+}
+
+.label-mono {
+  font-family: var(--font-mono-label), "IBM Plex Mono", monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.body-copy {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.text-bright {
+  color: #f4f6f9;
+}
+
+.text-soft {
+  color: var(--text-soft);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.panel-surface {
+  background: linear-gradient(155deg, rgba(17, 23, 34, 0.94), rgba(12, 16, 24, 0.94));
+  border: 1px solid var(--line);
+  border-radius: 1.45rem;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.blueprint-root {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.blueprint-grid,
+.blueprint-grid-fine {
+  position: absolute;
+  inset: -28%;
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.24;
+  animation: gridDrift 34s linear infinite;
+}
+
+.blueprint-grid-fine {
+  background-image:
+    linear-gradient(rgba(186, 154, 102, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(186, 154, 102, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+  opacity: 0.2;
+  animation: gridDriftReverse 44s linear infinite;
+}
+
+.blueprint-scan {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 36%,
+    rgba(186, 154, 102, 0.07) 50%,
+    transparent 64%
+  );
+  animation: scanSweep 9s ease-in-out infinite;
+}
+
+.blueprint-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    55rem 32rem at 78% 8%,
+    rgba(96, 136, 178, 0.17),
+    transparent 70%
+  );
+}
+
+.hero-image-mask {
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 46%, rgba(0, 0, 0, 0.4) 78%, transparent 100%);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 46%, rgba(0, 0, 0, 0.4) 78%, transparent 100%);
+}
+
+.cad-outline {
+  position: absolute;
+  border: 1px solid var(--line-strong);
+  opacity: 0.52;
+}
+
+.cad-outline-a {
+  left: 4%;
+  top: 6%;
+  width: 28%;
+  height: 20%;
+  border-radius: 2rem;
+  animation: floatCadA 7.2s ease-in-out infinite;
+}
+
+.cad-outline-b {
+  right: 12%;
+  bottom: 14%;
+  width: 33%;
+  height: 17%;
+  border-radius: 4rem;
+  animation: floatCadB 8.5s ease-in-out infinite;
+}
+
+.cad-outline-c {
+  right: 3%;
+  top: 18%;
+  width: 20%;
+  height: 11%;
+  border-radius: 1.25rem;
+  animation: floatCadA 8.8s ease-in-out infinite reverse;
+}
+
+@keyframes gridDrift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-46px, -36px, 0);
+  }
+}
+
+@keyframes gridDriftReverse {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(38px, 30px, 0);
+  }
+}
+
+@keyframes scanSweep {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: translateX(-14%);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateX(14%);
+  }
+}
+
+@keyframes floatCadA {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes floatCadB {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes fadeOutOverlay {
+  0% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOutOverlay 3s ease-in forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Mechanical portfolio icon">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6e9ef" />
+      <stop offset="100%" stop-color="#ba9a66" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="22" fill="#0a0d13" />
+  <g fill="none" stroke="url(#metal)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M64 28v14M64 86v14M28 64h14M86 64h14M40.6 40.6l10 10M77.4 77.4l10 10M87.4 40.6l-10 10M50.6 77.4l-10 10" />
+    <circle cx="64" cy="64" r="24" />
+    <circle cx="64" cy="64" r="8" />
+  </g>
+</svg>
