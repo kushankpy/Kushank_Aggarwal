@@ -119,7 +119,6 @@ export const projects: Project[] = [
         value: "Ongoing work with a target of sub-micron calibration reliability through model refinement and testing loops.",
       },
     ],
-    githubLink: "https://github.com/Kushaggar/Precision-Displacement-Sensor",
     status: "IN PROGRESS",
   },
 ];
