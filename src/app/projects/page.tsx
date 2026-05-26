@@ -85,16 +85,18 @@ export default function ProjectsPage() {
               ))}
             </div>
 
-            <div className="mt-6 flex justify-center">
-              <a
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ui-sans rounded-full border border-[var(--line)] px-5 py-3 text-center text-[1.05rem] text-soft transition hover:border-[var(--line-strong)] hover:text-[var(--text)]"
-              >
-                GitHub Repository
-              </a>
-            </div>
+            {project.title === "Arka - Solar Vehicle" && (
+              <div className="mt-6 flex justify-center">
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ui-sans rounded-full border border-[var(--line)] px-5 py-3 text-center text-[1.05rem] text-soft transition hover:border-[var(--line-strong)] hover:text-[var(--text)]"
+                >
+                  GitHub Repository
+                </a>
+              </div>
+            )}
           </motion.article>
         ))}
       </motion.section>
